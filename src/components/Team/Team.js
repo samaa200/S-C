@@ -18,22 +18,10 @@ import { motion, AnimatePresence } from "framer-motion";
     const cardsData = [
       {
         title: "Walli Ullah",
-        description: "Build custom mobile and web apps that",
+        description: "CEO",
         image: pic1, // Replace with actual image path
       },
-      {
-        title: "Walli Ullah",
-        description: "Build custom mobile and web apps that",
-        image: pic1, // Replace with actual image path
-      },{
-        title: "Walli Ullah",
-        description: "Build custom mobile and web apps that",
-        image: pic1, // Replace with actual image path
-      },{
-        title: "Walli Ullah",
-        description: "Build custom mobile and web apps that",
-        image: pic1, // Replace with actual image path
-      },
+      
   ];
 
   const [currentStartIndex, setCurrentStartIndex] = useState(0);

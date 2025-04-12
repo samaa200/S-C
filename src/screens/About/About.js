@@ -191,71 +191,71 @@ const About = () => {
           We dedicatedly master the power of technology in bespoke ways for our customers, guided by three core values:
         </Typography>
       </motion.div>
+{/* Right Side - Our Values */}
+<Box flex={1} display="flex" flexDirection="column" width="45%" padding="4.5%">
+  {/* Innovation Section */}
+  <motion.div
+    ref={topRightRef}
+    initial={{ opacity: 0, y: 50 }}
+    animate={{
+      opacity: topRightInView ? 1 : 0,
+      y: topRightInView ? 0 : 50,
+    }}
+    transition={{ duration: 1, delay: 0.5 }}
+    style={{ flex: 1, padding: "20px" }}
+  >
+    <Typography variant="h4" component="h2" gutterBottom style={{
+      fontFamily: 'roboto, sans-serif',
+      fontWeight: 600,
+      color: '#102b85'
+    }}>
+      Innovation
+    </Typography>
+    <Typography variant="body1" style={{
+      fontFamily: 'roboto, sans-serif',
+      fontSize: '1.1rem',
+      lineHeight: 1.6
+    }}>
+      We push boundaries to deliver cutting-edge solutions. Our team thrives on solving 
+      complex problems with creative technology, ensuring your business stays ahead 
+      in the digital landscape.
+    </Typography>
+  </motion.div>
 
-      {/* Right Side */}
-      <Box flex={1} display="flex" flexDirection="column" width="45%" padding="4.5%">
-        {/* Top Right Div */}
-        <motion.div
-          ref={topRightRef}
-          initial={{ opacity: 0, y: 50 }} // Start from below with opacity 0
-          animate={{
-            opacity: topRightInView ? 1 : 0,
-            y: topRightInView ? 0 : 50, // Move up when in view
-          }}
-          transition={{ duration: 1, delay: 0.5 }}
-          style={{ flex: 1, padding: "20px", color: "black" }}
-        >
-          <Typography variant="h5" component="h2">
-          Integrity
-          </Typography>
-          <Typography variant="body1">
-          Embody dependability, honesty, and transparency.
-          </Typography>
-        </motion.div>
+  {/* Integrity Section */}
+  <motion.div
+    ref={middleRightRef}
+    initial={{ opacity: 0, y: 50 }}
+    animate={{
+      opacity: middleRightInView ? 1 : 0,
+      y: middleRightInView ? 0 : 50,
+    }}
+    transition={{ duration: 1, delay: 1 }}
+    style={{ flex: 1, padding: "20px" }}
+  >
+    <Typography variant="h4" component="h2" gutterBottom style={{
+      fontFamily: 'roboto, sans-serif',
+      fontWeight: 600,
+      color: '#102b85'
+    }}>
+      Integrity
+    </Typography>
+    <Typography variant="body1" style={{
+      fontFamily: 'roboto, sans-serif',
+      fontSize: '1.1rem',
+      lineHeight: 1.6
+    }}>
+      We build trust through transparency and ethical practices. Every line of code, 
+      every business decision, and every client interaction reflects our commitment 
+      to doing what's right - not just what's profitable.
+    </Typography>
+  </motion.div>
 
-        {/* Middle Right Div */}
-        <motion.div
-          ref={middleRightRef}
-          initial={{ opacity: 0, y: 50 }} // Same as above, sliding up
-          animate={{
-            opacity: middleRightInView ? 1 : 0,
-            y: middleRightInView ? 0 : 50, // Slide to top when in view
-          }}
-          transition={{ duration: 1, delay: 1 }}
-          style={{ flex: 1, padding: "20px", color: "black" }}
-        >
-          <Typography variant="h5" component="h2">
-          Integrity
-          </Typography>
-          <Typography variant="body1">
-          Embody dependability, honesty, and transparency.
-          </Typography>
-        </motion.div>
-
-        {/* Bottom Right Div */}
-        <motion.div
-          ref={bottomRightRef}
-          initial={{ opacity: 0, y: 50 }} // Start from below with opacity 0
-          animate={{
-            opacity: bottomRightInView ? 1 : 0,
-            y: bottomRightInView ? 0 : 50, // Slide to top when in view
-          }}
-          transition={{ duration: 1, delay: 1.5 }}
-          style={{ flex: 1, padding: "20px" }}
-        >
-          <Typography variant="h5" component="h2">
-          Integrity
-          </Typography>
-          <br/>
-          <Typography variant="body1"
-          style={{width:'50%'}}>
-          Embody dependability, honesty, and transparency.
-          </Typography>
-        </motion.div>
-      </Box>
+  {/* Excellence Section */}
+  
+</Box>
     </Box>
-    <br/>
-      <br/>
+
     <FAQ/>
       <br/>
       <br/>
