@@ -1,17 +1,15 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
-import { motion } from "framer-motion"; // Import motion for animations
-import { useInView } from "react-intersection-observer"; // Import for intersection observer
-import person from "./pic2.jpg"
+import { Box, Typography, Button } from "@mui/material";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import person from "./pic2.jpg";
 
 const Splitout = () => {
-  // Right side (formerly Left side)
   const { ref: rightRef, inView: rightInView } = useInView({
-    triggerOnce: false, // Make sure the animation triggers every time it comes into view
-    threshold: 0.1, // When 10% of the element is visible
+    triggerOnce: false,
+    threshold: 0.1,
   });
 
-  // Left side sections (formerly Right side)
   const { ref: topLeftRef, inView: topLeftInView } = useInView({
     triggerOnce: false,
     threshold: 0.1,
@@ -27,7 +25,7 @@ const Splitout = () => {
 
   return (
     <Box display="flex" width="100%" height="100vh">
-      {/* Right Side (formerly Left side) */}
+      {/* Right Side - Image */}
       <motion.div
         ref={rightRef}
         initial={{ opacity: 0, x: 200 }}
@@ -36,13 +34,12 @@ const Splitout = () => {
           x: rightInView ? 0 : 200,
         }}
         transition={{
-          duration: 0.8, // Increase the duration for smoother motion
-          ease: [0.25, 0.46, 0.45, 0.94], // Custom ease-in-out for smoothness
-          delay: 0.1, // Small delay to enhance the transition feel
+          duration: 0.8,
+          ease: [0.25, 0.46, 0.45, 0.94],
+          delay: 0.1,
         }}
         style={{
           flex: 1,
-          color: "black",
           padding: "4%",
           display: "flex",
           flexDirection: "column",
@@ -52,83 +49,80 @@ const Splitout = () => {
           marginRight: "2%",
         }}
       >
-       
-        <br/>
         <img
-        style={{
-            width:'100%',
-            borderRadius:'10px'
-           
-        }}
-        src={person}
+          style={{
+            width: '100%',
+            borderRadius: '10px',
+            boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
+          }}
+          src={person}
+          alt="Software development team collaborating"
         />
       </motion.div>
 
-      {/* Left Side (formerly Right side) */}
+      {/* Left Side - Content Sections */}
       <Box flex={1} display="flex" flexDirection="column" width="50%" padding="4.5%">
-        {/* Top Left Div */}
+        {/* Our Approach Section */}
         <motion.div
           ref={topLeftRef}
-          initial={{ opacity: 0, y: 50 }} // Start from below with opacity 0
+          initial={{ opacity: 0, y: 50 }}
           animate={{
             opacity: topLeftInView ? 1 : 0,
-            y: topLeftInView ? 0 : 50, // Move up when in view
+            y: topLeftInView ? 0 : 50,
           }}
           transition={{ duration: 1, delay: 0.5 }}
-          style={{ flex: 1, padding: "20px", color: "black" }}
-        >
-          <Typography variant="h5" component="h2">
-            Left Top Div
-          </Typography>
-          <Typography variant="body1">
-            This is the first div on the left. You can add lots of text here.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-            lacinia odio vitae vestibulum. This section is separated by a colored
-            border.
-          </Typography>
-        </motion.div>
-
-        {/* Middle Left Div */}
-        <motion.div
-          ref={middleLeftRef}
-          initial={{ opacity: 0, y: 50 }} // Same as above, sliding up
-          animate={{
-            opacity: middleLeftInView ? 1 : 0,
-            y: middleLeftInView ? 0 : 50, // Slide to top when in view
-          }}
-          transition={{ duration: 1, delay: 1 }}
-          style={{ flex: 1, padding: "20px", color: "black" }}
-        >
-          <Typography variant="h5" component="h2">
-            Left Middle Div
-          </Typography>
-          <Typography variant="body1">
-            This is the second div on the left. More content can go here as well.
-            Phasellus tincidunt, quam vel fringilla laoreet, metus ligula ultrices
-            ex, eget aliquet nisi felis id libero.
-          </Typography>
-        </motion.div>
-
-        {/* Bottom Left Div */}
-        <motion.div
-          ref={bottomLeftRef}
-          initial={{ opacity: 0, y: 50 }} // Start from below with opacity 0
-          animate={{
-            opacity: bottomLeftInView ? 1 : 0,
-            y: bottomLeftInView ? 0 : 50, // Slide to top when in view
-          }}
-          transition={{ duration: 1, delay: 1.5 }}
           style={{ flex: 1, padding: "20px" }}
         >
-          <Typography variant="h5" component="h2">
-            Left Bottom Div
+          <Typography variant="h4" component="h2" gutterBottom style={{ 
+            fontFamily: 'roboto, sans-serif',
+            fontWeight: 600,
+            color: '#102b85'
+          }}>
+            Our Development Philosophy
           </Typography>
-          <Typography variant="body1">
-            This is the third div on the left. It can contain as much text as
-            needed. Praesent nec felis id ligula bibendum aliquam. Vestibulum sed
-            convallis purus.
+          <Typography variant="body1" paragraph style={{
+            fontFamily: 'roboto, sans-serif',
+            fontSize: '1.1rem',
+            lineHeight: 1.6
+          }}>
+            At S&C Solutions, we believe software should solve real business challenges. 
+            Our agile methodology combines cutting-edge technology with user-centric design 
+            to deliver solutions that drive measurable results. We don't just write code - 
+            we build strategic assets that grow with your business.
           </Typography>
         </motion.div>
+
+        {/* Technology Stack Section */}
+        <motion.div
+          ref={middleLeftRef}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{
+            opacity: middleLeftInView ? 1 : 0,
+            y: middleLeftInView ? 0 : 50,
+          }}
+          transition={{ duration: 1, delay: 1 }}
+          style={{ flex: 1, padding: "20px" }}
+        >
+          <Typography variant="h4" component="h2" gutterBottom style={{ 
+            fontFamily: 'roboto, sans-serif',
+            fontWeight: 600,
+            color: '#102b85'
+          }}>
+            Full-Stack Expertise
+          </Typography>
+          <Typography variant="body1" paragraph style={{
+            fontFamily: 'roboto, sans-serif',
+            fontSize: '1.1rem',
+            lineHeight: 1.6
+          }}>
+            Our team masters the complete technology spectrum - from React and Node.js 
+            for web applications to Swift/Kotlin for mobile, Python for AI/ML, and AWS/Azure 
+            for cloud infrastructure. We stay ahead of tech trends so you don't have to, 
+            ensuring your solutions are built on the most effective, future-proof platforms.
+          </Typography>
+        </motion.div>
+
+     
       </Box>
     </Box>
   );
