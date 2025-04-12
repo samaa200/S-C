@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Button, Container } from "react-bootstrap";
 import {
-  Code as CodeIcon,
+  Work as WorkIcon,
   Build as BuildIcon,
   Group as GroupIcon,
-  Work as WorkIcon,
   DesignServices as DesignServicesIcon,
   Cloud as CloudIcon,
   Security as SecurityIcon,
@@ -57,7 +56,8 @@ function NavBar() {
             background: "radial-gradient(circle at -0.1% 100.8%, rgb(0, 234, 255) 0.2%, rgb(0, 124, 255) 59.1%, rgb(198, 0, 255) 100.2%)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
-            marginLeft: "1rem"
+            marginLeft: "1rem",
+            marginRight: "6rem"
           }}
         >
           S&C Solutions
@@ -71,97 +71,115 @@ function NavBar() {
         </Navbar.Toggle>
         
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mx-auto" style={{ alignItems: "center" }}>
-        {/* Services Dropdown - Compact Version */}
-<div
-  className="nav-item dropdown"
-  onMouseEnter={() => !expanded && document.querySelector('.services-dropdown').classList.add("show")}
-  onMouseLeave={() => !expanded && document.querySelector('.services-dropdown').classList.remove("show")}
->
-  <span
-    className="nav-link dropdown-toggle"
-    style={{ 
-      color: "black",
-      fontFamily: "roboto, sans-serif",
-      fontSize: "19px",
-      cursor: "pointer",
-      padding: "0.5rem 1rem"
-    }}
-    id="servicesDropdown"
-    role="button"
-    aria-expanded="false"
-    onClick={(e) => {
-      if (window.innerWidth <= 992) {
-        e.preventDefault();
-        e.currentTarget.nextElementSibling.classList.toggle("show");
-      }
-    }}
-  >
-    Services
-  </span>
-  <div 
-    className="dropdown-menu services-dropdown p-2" 
-    aria-labelledby="servicesDropdown"
-    style={{
-      border: "none",
-      boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
-      minWidth: "600px",
-      maxWidth: "600px"
-    }}
-  >
-    <div className="row">
-      {[
-        { icon: <WorkIcon style={{ fontSize: "1.25rem" }} />, text: "App Development", link: "/services/app-dev" },
-        { icon: <BuildIcon style={{ fontSize: "1.25rem" }} />, text: "Web Development", link: "/services/web-dev" },
-        { icon: <GroupIcon style={{ fontSize: "1.25rem" }} />, text: "AI/ML", link: "/services/ai-ml" },
-        { icon: <DesignServicesIcon style={{ fontSize: "1.25rem" }} />, text: "UI/UX", link: "/services/ui-ux" },
-        { icon: <CloudIcon style={{ fontSize: "1.25rem" }} />, text: "Cloud", link: "/services/cloud-dev" },
-        { icon: <SecurityIcon style={{ fontSize: "1.25rem" }} />, text: "Security", link: "/services/it-security" }
-      ].map((item, index) => (
-        <div className="col-6" key={index}>
-          <Link 
-            to={item.link} 
-            className="dropdown-item d-flex align-items-center py-2 px-3"
-            style={{ 
-              color: "black", 
-              textDecoration: "none",
-              fontSize: "0.9rem",
-              borderRadius: "4px"
-            }}
-            onClick={() => setExpanded(false)}
-          >
-            <span style={{ 
-              marginRight: "0.75rem",
-              color: "#6200ea",
-              minWidth: "24px"
-            }}>
-              {item.icon}
-            </span>
-            <span>{item.text}</span>
-          </Link>
-        </div>
-      ))}
-    </div>
-  </div>
-</div>
-            {/* Other Links */}
-            {["Industries", "Blog", "About Us"].map((item, index) => (
+          <Nav className="d-flex align-items-center" style={{ width: "100%", justifyContent: "space-between" }}>
+            <div className="d-flex align-items-center">
+              {/* Services Dropdown */}
+              <div
+                className="nav-item dropdown"
+                onMouseEnter={() => !expanded && document.querySelector('.services-dropdown').classList.add("show")}
+                onMouseLeave={() => !expanded && document.querySelector('.services-dropdown').classList.remove("show")}
+                style={{ marginRight: "4rem" }}
+              >
+                <span
+                  className="nav-link dropdown-toggle"
+                  style={{ 
+                    color: "black",
+                    fontFamily: "roboto, sans-serif",
+                    fontSize: "19px",
+                    cursor: "pointer",
+                    padding: "0.5rem 1rem"
+                  }}
+                  id="servicesDropdown"
+                  role="button"
+                  aria-expanded="false"
+                  onClick={(e) => {
+                    if (window.innerWidth <= 992) {
+                      e.preventDefault();
+                      e.currentTarget.nextElementSibling.classList.toggle("show");
+                    }
+                  }}
+                >
+                  Services
+                </span>
+                <div 
+                  className="dropdown-menu services-dropdown p-2" 
+                  aria-labelledby="servicesDropdown"
+                  style={{
+                    border: "none",
+                    boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
+                    minWidth: "600px",
+                    maxWidth: "600px"
+                  }}
+                >
+                  <div className="row">
+                    {[
+                      { icon: <WorkIcon style={{ fontSize: "1.25rem" }} />, text: "App Development", link: "/services/app-dev" },
+                      { icon: <BuildIcon style={{ fontSize: "1.25rem" }} />, text: "Web Development", link: "/services/web-dev" },
+                      { icon: <GroupIcon style={{ fontSize: "1.25rem" }} />, text: "AI/ML", link: "/services/ai-ml" },
+                      { icon: <DesignServicesIcon style={{ fontSize: "1.25rem" }} />, text: "UI/UX", link: "/services/ui-ux" },
+                      { icon: <CloudIcon style={{ fontSize: "1.25rem" }} />, text: "Cloud", link: "/services/cloud-dev" },
+                      { icon: <SecurityIcon style={{ fontSize: "1.25rem" }} />, text: "Security", link: "/services/it-security" }
+                    ].map((item, index) => (
+                      <div className="col-6" key={index}>
+                        <Link 
+                          to={item.link} 
+                          className="dropdown-item d-flex align-items-center py-2 px-3"
+                          style={{ 
+                            color: "black", 
+                            textDecoration: "none",
+                            fontSize: "0.9rem",
+                            borderRadius: "4px"
+                          }}
+                          onClick={() => setExpanded(false)}
+                        >
+                          <span style={{ 
+                            marginRight: "0.75rem",
+                            color: "#6200ea",
+                            minWidth: "24px"
+                          }}>
+                            {item.icon}
+                          </span>
+                          <span>{item.text}</span>
+                        </Link>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Other Links */}
               <Nav.Link
-                key={index}
                 as={Link}
-                to={`/${item.toLowerCase().replace(" ", "-")}`}
+                to="/blog"
                 style={{
                   fontFamily: "roboto, sans-serif",
                   fontSize: "19px",
                   color: "black",
-                  padding: "0.5rem 1rem"
+                  padding: "0.5rem 1rem",
+                  marginRight: "4rem"
                 }}
                 onClick={() => setExpanded(false)}
               >
-                {item}
+                Blog
               </Nav.Link>
-            ))}
 
+              <Nav.Link
+                as={Link}
+                to="/about"
+                style={{
+                  fontFamily: "roboto, sans-serif",
+                  fontSize: "19px",
+                  color: "black",
+                  padding: "0.5rem 1rem",
+                  marginRight: "4rem"
+                }}
+                onClick={() => setExpanded(false)}
+              >
+                About Us
+              </Nav.Link>
+            </div>
+
+            {/* Contact Button - Right aligned */}
             <Button
               onClick={goToAbout}
               style={{
@@ -171,12 +189,13 @@ function NavBar() {
                 background: "white",
                 border: "1px solid black",
                 borderRadius: "10px",
-                marginLeft: "1rem",
                 padding: "0.5rem 1.5rem",
                 transition: "all 0.3s ease",
                 ":hover": {
                   background: "#f5f5f5"
-                }
+                },
+                marginLeft: "auto",
+                marginRight: "2rem"
               }}
               className="contact-btn"
             >

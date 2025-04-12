@@ -19,7 +19,7 @@ const Footer = () => {
       }}
     >
       <Typography variant="h6" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 'bold' }}>
-        Your Company Name
+        S&C Solutions
       </Typography>
       <Divider sx={{ backgroundColor: 'white', width: '80%', margin: '10px 0' }} /> {/* Divider line */}
       

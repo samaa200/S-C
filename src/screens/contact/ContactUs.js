@@ -172,20 +172,19 @@ const ContactUs = () => {
               variant="body1"
               style={{ marginTop: "20px", fontFamily: "roboto, sans-serif" }}
             >
-              <strong>Address:</strong> 123 Innovation Street, Tech City,
-              Country
+              <strong>Address:</strong> Bahria Town Lahore
             </Typography>
             <Typography
               variant="body1"
               style={{ marginTop: "10px", fontFamily: "roboto, sans-serif" }}
             >
-              <strong>Email:</strong> contact@techcompany.com
+              <strong>Email:</strong> scsolutions@gmail.com
             </Typography>
             <Typography
               variant="body1"
               style={{ marginTop: "10px", fontFamily: "roboto, sans-serif" }}
             >
-              <strong>Phone:</strong> +123 456 7890
+              <strong>Phone:</strong> +92-3111407968
             </Typography>
             <Typography
               variant="body1"
