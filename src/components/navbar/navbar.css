@@ -1,0 +1,14 @@
+.services-dropdown {
+  transition: all 0.2s ease;
+}
+
+.services-dropdown .dropdown-item:hover {
+  background-color: #f8f9fa !important;
+}
+
+@media (max-width: 576px) {
+  .services-dropdown {
+    min-width: 280px !important;
+    max-width: 100% !important;
+  }
+}

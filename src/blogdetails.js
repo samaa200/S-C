@@ -1,0 +1,22 @@
+const detailBlog = {
+    "blog-1": {
+        title1:"Reaching New Heights: The Revolution of Cloud Computing",
+        Description1:"Cloud computing has transcended beyond just a buzzword; it has become the backbone of modern enterprises. This technology enables businesses to store, manage, and process data over the internet, offering scalability and flexibility unheard of in traditional IT infrastructures.",
+        Description2:"The transition from physical servers to cloud platforms has empowered organizations to optimize costs, enhance accessibility, and improve disaster recovery protocols. Major players like Amazon Web Services (AWS), Microsoft Azure, and Google Cloud have democratized advanced computing power, making it available to businesses of all sizes Cloud computing has also introduced innovative models like Infrastructure-as-a-Service (IaaS), Platform-as-a-Service (PaaS), and Software-as-a-Service (SaaS), allowing organizations to tailor solutions to their specific needs.Furthermore, edge computing and serverless architectures have emerged as game-changers, reducing latency and enabling real-time analytics. From hosting applications to powering AI workloads, the cloud has become indispensable",
+        Description3:"As businesses adopt multi-cloud and hybrid cloud strategies, the future of cloud computing lies in increased automation, better security measures, and broader global accessibility. For organizations, embracing the cloud isn't just an option—it's a necessity.",
+    },
+    "blog-2": {
+        title1:"Reaching New Heights: The Revolution of Cloud Computing",
+        Description1:"Cloud computing has transcended beyond just a buzzword; it has become the backbone of modern enterprises. This technology enables businesses to store, manage, and process data over the internet, offering scalability and flexibility unheard of in traditional IT infrastructures.",
+        Description2:"The transition from physical servers to cloud platforms has empowered organizations to optimize costs, enhance accessibility, and improve disaster recovery protocols. Major players like Amazon Web Services (AWS), Microsoft Azure, and Google Cloud have democratized advanced computing power, making it available to businesses of all sizes Cloud computing has also introduced innovative models like Infrastructure-as-a-Service (IaaS), Platform-as-a-Service (PaaS), and Software-as-a-Service (SaaS), allowing organizations to tailor solutions to their specific needs.Furthermore, edge computing and serverless architectures have emerged as game-changers, reducing latency and enabling real-time analytics. From hosting applications to powering AI workloads, the cloud has become indispensable",
+        Description3:"As businesses adopt multi-cloud and hybrid cloud strategies, the future of cloud computing lies in increased automation, better security measures, and broader global accessibility. For organizations, embracing the cloud isn't just an option—it's a necessity.",
+    },
+    "blog-3": {
+        title1:"Reaching New Heights: The Revolution of Cloud Computing",
+        Description1:"Cloud computing has transcended beyond just a buzzword; it has become the backbone of modern enterprises. This technology enables businesses to store, manage, and process data over the internet, offering scalability and flexibility unheard of in traditional IT infrastructures.",
+        Description2:"The transition from physical servers to cloud platforms has empowered organizations to optimize costs, enhance accessibility, and improve disaster recovery protocols. Major players like Amazon Web Services (AWS), Microsoft Azure, and Google Cloud have democratized advanced computing power, making it available to businesses of all sizes Cloud computing has also introduced innovative models like Infrastructure-as-a-Service (IaaS), Platform-as-a-Service (PaaS), and Software-as-a-Service (SaaS), allowing organizations to tailor solutions to their specific needs.Furthermore, edge computing and serverless architectures have emerged as game-changers, reducing latency and enabling real-time analytics. From hosting applications to powering AI workloads, the cloud has become indispensable",
+        Description3:"As businesses adopt multi-cloud and hybrid cloud strategies, the future of cloud computing lies in increased automation, better security measures, and broader global accessibility. For organizations, embracing the cloud isn't just an option—it's a necessity.",
+    }
+}
+
+export default detailBlog;
